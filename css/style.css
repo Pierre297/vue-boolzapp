@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[class*="col"] {
+  color: white;
+  text-align: center;
+  /* debug */
+  border: 1px solid black;
+  min-height: 100px;
+}
+
+.green-background {
+  background-color: rgb(2 149 136);
+  height: 17vh;
+}
+
+.general-container {
+  background-color: rgb(220 219 210);
+  height: 83vh;
+}
+
+.main-container {
+  width: 90%;
+}
