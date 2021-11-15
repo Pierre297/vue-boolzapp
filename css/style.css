@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,9 @@
 
 [class*="col"] {
   color: white;
-  text-align: center;
+  min-height: 70px;
   /* debug */
-  border: 1px solid black;
-  min-height: 100px;
+  /* border: 1px solid black; */
 }
 
 .green-background {
@@ -24,4 +25,91 @@
 
 .main-container {
   width: 90%;
+  margin-top: -100px;
+}
+
+.white {
+  background-color: white;
+}
+
+.fas {
+  width: 50px;
+  color: rgb(177 177 177);
+  margin: -10px;
+  cursor: pointer;
+}
+
+.far {
+  width: 50px;
+  color: rgb(177 177 177);
+  margin: -10px;
+  cursor: pointer;
+}
+
+.under-text {
+  color: rgb(114 123 125);
+  font-size: 15px;
+  display: inline-block;
+}
+
+/* HEADER */
+
+.header-color {
+  background-color: rgb(234 234 234);
+}
+
+.header-content {
+  height: 80px;
+}
+
+.profile-pic {
+  color: black;
+  display: inline-block;
+}
+
+.pfp {
+  width: 60px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.icons-profile {
+  display: inline-block;
+  font-size: x-large;
+  margin-top: 20px;
+}
+
+/* MAIN */
+
+.main-content {
+  height: 770px;
+}
+
+main {
+  background-image: url(../img/pattern.jpg);
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col {
+  margin-top: 699px;
+  background-color: rgb(243 238 234);
+}
+
+.footer-element {
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+.chat-barr {
+  width: 95%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
 }
