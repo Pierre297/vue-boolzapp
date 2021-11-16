@@ -23,7 +23,7 @@
     <title>BoolzApp</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="adriano">
       <div class="row">
         <div class="col green-background"></div>
       </div>
@@ -86,28 +86,24 @@
               <div id="myapp">
                 <ul>
                   <li v-for="contact, i in contacts" :key="i" id="my-contact">
-                    <img
-                      :src="contacts[i].avatar"
-                      alt=""
-                      class="pfp d-inline"
-                    />
-                    <h6 class="d-inline">{{contacts[i].name}}</h6>
+                    <img :src="contact.avatar" alt="" class="pfp d-inline" />
+                    <h6 class="d-inline">{{contact.name}}</h6>
                   </li>
                 </ul>
               </div>
             </aside>
             <!-- chat section -->
             <main class="col-8 main-content">
+              <!-- messages container -->
               <div id="myapp">
-                <!-- messages container -->
                 <div
-                  v-for="message, i in contacts.messages"
+                  v-for="message, i in contacts[0].messages"
                   :key="i"
                   id="my-contact"
                   class="row chatboard"
                 >
                   <div class="row">
-                    <div :class="message.status col">
+                    <div class="col" :class="message.status">
                       <span>{{message.text}}</span>
                       <p>{{message.date}}</p>
                     </div>
