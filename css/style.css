@@ -70,7 +70,7 @@
 .pfp {
   width: 60px;
   border-radius: 50%;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .icons-profile {
@@ -82,13 +82,95 @@
 /* MAIN */
 
 .main-content {
-  height: 770px;
+  height: 81vh;
 }
 
 main {
   background-image: url(../img/pattern.jpg);
 }
 
+.chatboard {
+  height: calc(100% - 70px);
+}
+
+.sent {
+  color: black;
+  width: 30%;
+  height: 50px;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 10px;
+  background-color: rgb(183 214 160);
+}
+
+.received {
+  color: black;
+  width: 30%;
+  height: 50px;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 10px;
+  background-color: white;
+}
+
+#my-contact {
+  color: black;
+}
+
+#myapp li {
+  border: 1px solid rgb(234 234 234);
+  width: 100%;
+  cursor: pointer;
+}
+
+#myapp ul {
+  padding-left: 0rem;
+  width: 100%;
+}
+
+.notifications {
+  background-color: rgb(142 218 252);
+  min-height: 60px;
+  text-align: center;
+  color: black;
+}
+
+.notifications span {
+  width: 74%;
+  margin-top: 10px;
+}
+
+.notifications a {
+  width: 55%;
+  margin-left: 61px;
+  padding-bottom: 5px;
+  color: gray;
+}
+
+.search-barr input {
+  margin-top: 5px;
+  width: 80%;
+}
+
+.fa-search {
+  margin-top: 10px;
+}
+
+.bell {
+  border-radius: 50%;
+  background-color: white;
+  width: 40px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 13px;
+  padding-top: 9px;
+  padding-right: 41px;
+  display: inline-block;
+}
+
+#my-contact {
+  list-style-type: none;
+}
 /* FOOTER */
 
 footer {
@@ -97,8 +179,10 @@ footer {
 }
 
 .footer-col {
-  margin-top: 699px;
   background-color: rgb(243 238 234);
+  margin-top: 575px;
+  position: absolute;
+  width: 60%;
 }
 
 .footer-element {
