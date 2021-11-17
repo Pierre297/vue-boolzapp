@@ -147,9 +147,13 @@ main {
   color: gray;
 }
 
+.search-barr {
+  margin-right: 20px;
+}
+
 .search-barr input {
   margin-top: 5px;
-  width: 80%;
+  width: 88%;
 }
 
 .fa-search {
@@ -171,6 +175,10 @@ main {
 #my-contact {
   list-style-type: none;
 }
+
+aside #my-contact:hover {
+  background-color: rgb(233 235 235);
+}
 /* FOOTER */
 
 footer {
@@ -180,8 +188,10 @@ footer {
 
 .footer-col {
   background-color: rgb(243 238 234);
-  margin-top: 325px;
+  position: absolute;
+  bottom: 0;
   width: 60%;
+  margin-bottom: 39px;
 }
 
 .footer-element {
