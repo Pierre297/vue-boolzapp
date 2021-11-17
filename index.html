@@ -125,6 +125,8 @@
                 <div class="col-10 text-center">
                   <input
                     type="text"
+                    v-model="myContacts"
+                    @keyup.enter="addMessage"
                     class="chat-barr"
                     placeholder="Scrivi un messaggio"
                   />

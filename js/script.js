@@ -100,5 +100,22 @@ var app = new Vue({
       // visibilità ai messaggi del contatto
       this.contactActive = i;
     },
+    addMessage() {
+      this.newMessage = {
+        date: "10/01/2020 15:30:55",
+        text: this.myContacts,
+        status: "sent",
+      };
+      this.newAnswer = {
+        date: "10/01/2020 15:30:55",
+        text: "ok",
+        status: "received",
+      };
+
+      this.contacts.find((element) => {
+        element.messages.push(this.newMessage);
+        setTimeout(() => element.messages.push(this.newAnswer), 1000);
+      });
+    },
   },
 });
