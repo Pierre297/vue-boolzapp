@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: "#adriano",
+  el: "#myapplication",
   data: {
     myContacts: "",
     contacts: [
@@ -87,5 +87,18 @@ var app = new Vue({
         ],
       },
     ],
+    contactActive: 0,
+  },
+  mounted() {},
+  methods: {
+    getMessageClass(i) {
+      let thisContact = this.contacts[this.contactActive];
+      let messageClass = "message" + thisContact.messages[i].status;
+      return messageClass;
+    },
+    setActiveConversation(i) {
+      // visibilità ai messaggi del contatto
+      this.contactActive = i;
+    },
   },
 });

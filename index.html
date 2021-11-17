@@ -23,7 +23,7 @@
     <title>BoolzApp</title>
   </head>
   <body>
-    <div class="container-fluid" id="adriano">
+    <div class="container-fluid" id="myapplication">
       <div class="row">
         <div class="col green-background"></div>
       </div>
@@ -48,15 +48,16 @@
             </aside>
             <header class="col-8 header-content">
               <div class="row justify-content-between">
+                <!-- contatto selezionato -->
                 <div class="col-6 profile-pic">
                   <img
-                    src="img/avatar_1.jpg"
-                    alt="Michele"
+                    :src="contacts[contactActive].avatar"
+                    alt=""
                     class="pfp d-inline"
                   />
-                  <h6 class="d-inline">Michele</h6>
+                  <h6 class="d-inline">{{contacts[contactActive].name}}</h6>
                   <p class="under-text d-inline">
-                    Ultimo accesso oggi alle 10/01/2020 16:15:22
+                    {{contacts[contactActive].messages.date}}
                   </p>
                 </div>
                 <div class="col-2 text-center icons-profile">
@@ -85,7 +86,13 @@
               <!-- lista contatti -->
               <div id="myapp">
                 <ul>
-                  <li v-for="contact, i in contacts" :key="i" id="my-contact">
+                  <li
+                    v-for="contact, i in contacts"
+                    :key="i"
+                    id="my-contact"
+                    class="(i === contactActive) ? 'contact active' : 'contact'"
+                    @click="setActiveConversation(i)"
+                  >
                     <img :src="contact.avatar" alt="" class="pfp d-inline" />
                     <h6 class="d-inline">{{contact.name}}</h6>
                   </li>
@@ -97,7 +104,7 @@
               <!-- messages container -->
               <div id="myapp">
                 <div
-                  v-for="message, i in contacts[0].messages"
+                  v-for="message, i in contacts[contactActive].messages"
                   :key="i"
                   id="my-contact"
                   class="row chatboard"
