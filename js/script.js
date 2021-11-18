@@ -1,6 +1,7 @@
 var app = new Vue({
   el: "#myapplication",
   data: {
+    search: "",
     myContacts: "",
     contacts: [
       {
@@ -115,6 +116,11 @@ var app = new Vue({
       this.contacts.find((element) => {
         element.messages.push(this.newMessage);
         setTimeout(() => element.messages.push(this.newAnswer), 1000);
+      });
+    },
+    filteredList() {
+      return this.contacts.filter((contact) => {
+        return contact.name.toLowerCase().includes(this.search.toLowerCase());
       });
     },
   },

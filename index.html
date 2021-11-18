@@ -81,7 +81,14 @@
 
               <div class="row search-barr">
                 <i class="fas fa-search"></i>
-                <input type="text" name="" id="" placeholder="cerca chat" />
+                <input
+                  type="text"
+                  name=""
+                  v-model="search"
+                  @keyup.enter="filteredList"
+                  id=""
+                  placeholder="cerca chat"
+                />
               </div>
               <!-- lista contatti -->
               <div id="myapp">
