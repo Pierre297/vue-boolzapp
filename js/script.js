@@ -118,10 +118,10 @@ var app = new Vue({
         setTimeout(() => element.messages.push(this.newAnswer), 1000);
       });
     },
-    filteredList() {
-      return this.contacts.filter((contact) => {
-        return contact.name.toLowerCase().includes(this.search.toLowerCase());
-      });
-    },
+    // filteredList() {
+    //   return this.contacts.filter((contact) => {
+    //     return contact.name.toLowerCase().includes(this.search.toLowerCase());
+    //   });
+    // },
   },
 });
