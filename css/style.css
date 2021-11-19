@@ -150,30 +150,30 @@ main {
 
 .notifications {
   background-color: rgb(142 218 252);
-  min-height: 60px;
-  text-align: center;
+  height: 85px;
+
   color: black;
 }
 
-.notifications span {
-  width: 74%;
-  margin-top: 10px;
+.notifications a {
+  color: gray;
+  display: block;
+  min-height: 55px;
 }
 
-.notifications a {
-  width: 55%;
-  margin-left: 61px;
-  padding-bottom: 5px;
-  color: gray;
+.desktop-not {
+  display: inline-block;
+  width: 85%;
+  margin: 14px auto;
 }
 
 .search-barr {
-  margin-right: 20px;
+  margin-left: 5px;
 }
 
 .search-barr input {
   margin-top: 5px;
-  width: 88%;
+  width: 89%;
 }
 
 .fa-search {
@@ -181,15 +181,16 @@ main {
 }
 
 .bell {
+  margin: 15px 10px;
   border-radius: 50%;
   background-color: white;
   width: 40px;
-  height: 50px;
-  margin-left: 10px;
-  margin-top: 13px;
-  padding-top: 9px;
-  padding-right: 41px;
+  height: 40px;
   display: inline-block;
+}
+
+.fa-bell-slash {
+  margin: 12px;
 }
 /* FOOTER */
 
