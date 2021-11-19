@@ -103,6 +103,11 @@ main {
   padding-left: 0;
 }
 
+main .myapp {
+  margin-left: 60%;
+  width: 100%;
+}
+
 #my-contact-list:hover {
   background-color: rgb(233 235 235);
 }
@@ -218,6 +223,11 @@ footer {
   margin-top: 10px;
   border-radius: 10px;
   border: none;
+  padding: 15px;
+}
+
+:focus {
+  outline: none;
 }
 
 main {
