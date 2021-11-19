@@ -93,39 +93,59 @@ main {
   height: calc(100% - 70px);
 }
 
+#my-contact-list {
+  color: black;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.myapp ul {
+  padding-left: 0;
+}
+
+#my-contact-list:hover {
+  background-color: rgb(233 235 235);
+}
+
+/* messaggi */
+
+#my-contact {
+  color: black;
+  width: 40%;
+}
+
 .sent {
   color: black;
-  width: 30%;
   height: 50px;
   border-radius: 20px;
-  margin: 30px;
+  margin: 5px;
   padding: 10px;
   background-color: rgb(183 214 160);
 }
 
 .received {
   color: black;
-  width: 30%;
   height: 50px;
   border-radius: 20px;
-  margin: 30px;
+  margin: 5px;
   padding: 10px;
   background-color: white;
 }
 
-#my-contact {
-  color: black;
-}
-
-#myapp li {
+.myapp li {
   border: 1px solid rgb(234 234 234);
   width: 100%;
   cursor: pointer;
 }
 
-#myapp ul {
+.myapp ul {
   padding-left: 0rem;
   width: 100%;
+  overflow: scroll;
+}
+
+.myapp ul::-webkit-scrollbar {
+  display: none;
 }
 
 .notifications {
@@ -171,14 +191,6 @@ main {
   padding-right: 41px;
   display: inline-block;
 }
-
-#my-contact {
-  list-style-type: none;
-}
-
-aside #my-contact:hover {
-  background-color: rgb(233 235 235);
-}
 /* FOOTER */
 
 footer {
@@ -205,4 +217,22 @@ footer {
   margin-top: 10px;
   border-radius: 10px;
   border: none;
+}
+
+main {
+  overflow: scroll;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+::placeholder {
+  padding-left: 10px;
+}
+
+.time-message {
+  font-size: 12px;
+  color: gray;
+  text-align: end;
 }

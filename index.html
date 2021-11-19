@@ -91,13 +91,13 @@
                 />
               </div>
               <!-- lista contatti -->
-              <div id="myapp">
+              <div class="myapp">
                 <ul>
                   <li
                     v-for="contact, i in contacts"
                     v-if="contact.name.toLowerCase().includes(search)"
                     :key="i"
-                    id="my-contact"
+                    id="my-contact-list"
                     class="(i === contactActive) ? 'contact active' : 'contact'"
                     @click="setActiveConversation(i)"
                   >
@@ -110,18 +110,16 @@
             <!-- chat section -->
             <main class="col-8 main-content">
               <!-- messages container -->
-              <div id="myapp">
+              <div class="row myapp d-flex flex-column">
                 <div
                   v-for="message, i in contacts[contactActive].messages"
                   :key="i"
                   id="my-contact"
                   class="row chatboard"
                 >
-                  <div class="row">
-                    <div class="col" :class="message.status">
-                      <span>{{message.text}}</span>
-                      <p>{{message.date}}</p>
-                    </div>
+                  <div class="col" :class="message.status">
+                    <span>{{message.text}}</span>
+                    <p class="time-message">{{message.date}}</p>
                   </div>
                 </div>
               </div>
